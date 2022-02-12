@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class ContentProvierDriver {
+public class ContentProviderDriver {
     public void run(Context context, String uriPayload){
         if (uriPayload != null) {
             try {

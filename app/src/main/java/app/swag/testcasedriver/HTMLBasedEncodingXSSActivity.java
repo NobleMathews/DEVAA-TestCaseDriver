@@ -10,10 +10,7 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.util.Log;
 import android.view.View;
-
-import app.swag.testcasedriver.contentprovider.ContentProvierDriver;
 
 public class HTMLBasedEncodingXSSActivity extends AppCompatActivity {
 
@@ -26,11 +23,11 @@ public class HTMLBasedEncodingXSSActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         Intent mIntent = new Intent();
+        mIntent.putExtra("bla", "bla");
         mIntent.setClassName(intent.getStringExtra("packageName"), intent.getStringExtra("className"));
         mIntent.setData(Uri.parse(intent.getStringExtra("uri1")));
         startActivity(mIntent);
-
-
+//        Log.e("TestResponse",Boolean.toString(result));
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

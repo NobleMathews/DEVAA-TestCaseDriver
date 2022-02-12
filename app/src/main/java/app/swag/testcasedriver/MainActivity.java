@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import app.swag.testcasedriver.contentprovider.ContentProvierDriver;
+import app.swag.testcasedriver.contentprovider.ContentProviderDriver;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +14,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Intent intent = getIntent();
-        new ContentProvierDriver().run(getApplicationContext(), intent.getStringExtra("uri1"));
+        new ContentProviderDriver().run(getApplicationContext(), intent.getStringExtra("uri1"));
     }
 }
