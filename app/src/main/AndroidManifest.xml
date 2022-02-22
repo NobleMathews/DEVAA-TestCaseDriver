@@ -13,24 +13,28 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.TestCaseDriver">
         <activity
             android:name=".HTMLBasedEncodingXSSActivity"
             android:label="@string/title_activity_h_t_m_l_based_encoding_x_s_s"
-            android:theme="@style/Theme.TestCaseDriver.NoActionBar">
+            android:theme="@style/Theme.TestCaseDriver.NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ComponentExploit" android:exported="true"/>
     </application>
 
 </manifest>
